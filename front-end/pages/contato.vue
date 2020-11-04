@@ -82,9 +82,9 @@ import Inicio from '../components/Inicio'
 export default {
   components: {
     Footer,
-    Inicio
+    Inicio,
   },
-  methods: {}
+  methods: {},
 }
 </script>
 

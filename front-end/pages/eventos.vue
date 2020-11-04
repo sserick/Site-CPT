@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <Inicio titulo="Eventos" />
-    <v-container class="EventColor">
+    <v-container-fluid class="EventColor">
       <v-row justify="center">
         <v-col
           v-for="(evento, i) in eventos"
@@ -14,7 +14,7 @@
           <Events />
         </v-col>
       </v-row>
-    </v-container>
+    </v-container-fluid>
     <Footer />
   </v-app>
 </template>
@@ -28,7 +28,7 @@ export default {
   components: {
     Footer,
     Inicio,
-    Events
+    Events,
   },
   data() {
     return {
@@ -43,7 +43,7 @@ export default {
           datahoraTree: '',
           datahoraFour: '',
           linkForm: '',
-          linkSaibaMais: ''
+          linkSaibaMais: '',
         },
         {
           title: 'Nome do Evento',
@@ -55,7 +55,7 @@ export default {
           datahoraTree: '',
           datahoraFour: '',
           linkForm: '',
-          linkSaibaMais: ''
+          linkSaibaMais: '',
         },
         {
           title: 'Nome do Evento',
@@ -67,7 +67,7 @@ export default {
           datahoraTree: '',
           datahoraFour: '',
           linkForm: '',
-          linkSaibaMais: ''
+          linkSaibaMais: '',
         },
         {
           title: 'Nome do Evento',
@@ -79,12 +79,12 @@ export default {
           datahoraTree: '',
           datahoraFour: '',
           linkForm: '',
-          linkSaibaMais: ''
-        }
-      ]
+          linkSaibaMais: '',
+        },
+      ],
     }
   },
-  methods: {}
+  methods: {},
 }
 </script>
 

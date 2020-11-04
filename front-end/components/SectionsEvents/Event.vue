@@ -67,7 +67,7 @@ export default {
   data() {
     return {
       loading: false,
-      selection: 1
+      selection: 1,
     }
   },
 
@@ -76,8 +76,8 @@ export default {
       this.loading = true
 
       setTimeout(() => (this.loading = false), 2000)
-    }
-  }
+    },
+  },
 }
 </script>
 

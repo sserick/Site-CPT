@@ -15,9 +15,9 @@ export default {
   components: {
     Footer,
     Inicio,
-    SobreNosTexto
+    SobreNosTexto,
   },
-  methods: {}
+  methods: {},
 }
 </script>
 

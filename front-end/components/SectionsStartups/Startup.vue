@@ -38,26 +38,26 @@ export default {
     name: {
       type: String,
       required: true,
-      default: 'Título'
+      default: 'Título',
     },
     text: {
       type: String,
       required: true,
-      default: 'Texto da startup'
+      default: 'Texto da startup',
     },
     imagem: {
       type: String,
-      default: '/imagens/Icons/LogoCPT.png'
+      default: '/imagens/Icons/LogoCPT.png',
     },
     href: {
       type: String,
       required: true,
-      default: '/imagens/Icons/LogoCPT.png'
-    }
+      default: '/imagens/Icons/LogoCPT.png',
+    },
   },
   data() {
     return {}
-  }
+  },
 }
 </script>
 

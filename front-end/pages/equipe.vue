@@ -30,7 +30,7 @@ export default {
   components: {
     Footer,
     Inicio,
-    Equipe
+    Equipe,
   },
   data() {
     return {
@@ -42,7 +42,7 @@ export default {
           text: 'Thank you for joining our community...',
           facebook: 'https://www.facebook.com/',
           instagram: '',
-          linkedln: ''
+          linkedln: '',
         },
         {
           avatar: 'https://avatars0.githubusercontent.com/u/9064066?v=4&s=460',
@@ -51,7 +51,7 @@ export default {
           text: 'Thank you for joining our community...',
           facebook: 'https://www.facebook.com/',
           instagram: '',
-          linkedln: ''
+          linkedln: '',
         },
         {
           avatar: 'https://avatars0.githubusercontent.com/u/9064066?v=4&s=460',
@@ -60,8 +60,8 @@ export default {
           text: 'Thank you for joining our community...',
           facebook: 'https://www.facebook.com/',
           instagram: '',
-          linkedln: ''
-        }
+          linkedln: '',
+        },
       ],
       parcerias: [
         {
@@ -70,7 +70,7 @@ export default {
           face: 'https://www.google.com/',
           insta: 'https://www.youtube.com/',
           twitter: 'https://www.google.com.br/maps',
-          linkdln: 'https://calendar.google.com/calendar'
+          linkdln: 'https://calendar.google.com/calendar',
         },
         {
           name: 'Parcerias 2',
@@ -78,7 +78,7 @@ export default {
           face: 'https://www.google.com/',
           insta: 'https://www.youtube.com/',
           twitter: 'https://www.google.com.br/maps',
-          linkdln: 'https://calendar.google.com/calendar'
+          linkdln: 'https://calendar.google.com/calendar',
         },
         {
           name: 'Parcerias 3',
@@ -86,8 +86,8 @@ export default {
           face: 'https://www.google.com/',
           insta: 'https://www.youtube.com/',
           twitter: 'https://www.google.com.br/maps',
-          linkdln: 'https://calendar.google.com/calendar'
-        }
+          linkdln: 'https://calendar.google.com/calendar',
+        },
       ],
       professores: [
         {
@@ -96,7 +96,7 @@ export default {
           face: 'https://www.google.com/',
           insta: 'https://www.youtube.com/',
           twitter: 'https://www.google.com.br/maps',
-          linkdln: 'https://calendar.google.com/calendar'
+          linkdln: 'https://calendar.google.com/calendar',
         },
         {
           name: 'Professores 2',
@@ -104,7 +104,7 @@ export default {
           face: 'https://www.google.com/',
           insta: 'https://www.youtube.com/',
           twitter: 'https://www.google.com.br/maps',
-          linkdln: 'https://calendar.google.com/calendar'
+          linkdln: 'https://calendar.google.com/calendar',
         },
         {
           name: 'Professores 3',
@@ -112,8 +112,8 @@ export default {
           face: 'https://www.google.com/',
           insta: 'https://www.youtube.com/',
           twitter: 'https://www.google.com.br/maps',
-          linkdln: 'https://calendar.google.com/calendar'
-        }
+          linkdln: 'https://calendar.google.com/calendar',
+        },
       ],
       alunos: [
         {
@@ -122,7 +122,7 @@ export default {
           face: 'https://www.google.com/',
           insta: 'https://www.youtube.com/',
           twitter: 'https://www.google.com.br/maps',
-          linkdln: 'https://calendar.google.com/calendar'
+          linkdln: 'https://calendar.google.com/calendar',
         },
         {
           name: 'Alunos 2',
@@ -130,7 +130,7 @@ export default {
           face: 'https://www.google.com/',
           insta: 'https://www.youtube.com/',
           twitter: 'https://www.google.com.br/maps',
-          linkdln: 'https://calendar.google.com/calendar'
+          linkdln: 'https://calendar.google.com/calendar',
         },
         {
           name: 'Alunos 3',
@@ -138,8 +138,8 @@ export default {
           face: 'https://www.google.com/',
           insta: 'https://www.youtube.com/',
           twitter: 'https://www.google.com.br/maps',
-          linkdln: 'https://calendar.google.com/calendar'
-        }
+          linkdln: 'https://calendar.google.com/calendar',
+        },
       ],
       exalunos: [
         {
@@ -148,7 +148,7 @@ export default {
           face: 'https://www.google.com/',
           insta: 'https://www.youtube.com/',
           twitter: 'https://www.google.com.br/maps',
-          linkdln: 'https://calendar.google.com/calendar'
+          linkdln: 'https://calendar.google.com/calendar',
         },
         {
           name: 'Ex aluno 2',
@@ -156,7 +156,7 @@ export default {
           face: 'https://www.google.com/',
           insta: 'https://www.youtube.com/',
           twitter: 'https://www.google.com.br/maps',
-          linkdln: 'https://calendar.google.com/calendar'
+          linkdln: 'https://calendar.google.com/calendar',
         },
         {
           name: 'Ex aluno 3',
@@ -164,12 +164,12 @@ export default {
           face: 'https://www.google.com/',
           insta: 'https://www.youtube.com/',
           twitter: 'https://www.google.com.br/maps',
-          linkdln: 'https://calendar.google.com/calendar'
-        }
-      ]
+          linkdln: 'https://calendar.google.com/calendar',
+        },
+      ],
     }
   },
-  methods: {}
+  methods: {},
 }
 </script>
 

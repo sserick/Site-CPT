@@ -21,7 +21,7 @@ export default {
   components: {
     Footer,
     Inicio,
-    Startup
+    Startup,
   },
   data() {
     return {
@@ -31,26 +31,26 @@ export default {
           text:
             'Small plates, salads & sandwiches - an intimate setting with 12 indoor Small plates, salads & sandwiches - an intimate setting with 12 indoor Small plates, salads & sandwiches - an intimate setting with 12 indoor',
           href: '',
-          imagem: ''
+          imagem: '',
         },
         {
           name: 'Nome da Startup 2',
           text:
             'Small plates, salads & sandwiches - an intimate setting with 12 indoor Small plates, salads & sandwiches - an intimate setting with 12 indoor Small plates, salads & sandwiches - an intimate setting with 12 indoor',
           href: '',
-          imagem: ''
+          imagem: '',
         },
         {
           name: 'Nome da Startup 3',
           text:
             'Small plates, salads & sandwiches - an intimate setting with 12 indoor Small plates, salads & sandwiches - an intimate setting with 12 indoor Small plates, salads & sandwiches - an intimate setting with 12 indoor',
           href: '',
-          imagem: ''
-        }
-      ]
+          imagem: '',
+        },
+      ],
     }
   },
-  methods: {}
+  methods: {},
 }
 </script>
 

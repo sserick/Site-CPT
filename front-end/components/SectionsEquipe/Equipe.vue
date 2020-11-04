@@ -70,19 +70,19 @@ export default {
     title: {
       type: String,
       required: true,
-      default: ''
+      default: '',
     },
     messages: {
       type: Array,
       required: true,
-      default: () => []
-    }
+      default: () => [],
+    },
   },
   data() {
     return {
-      hoverOne: false
+      hoverOne: false,
     }
-  }
+  },
 }
 </script>
 

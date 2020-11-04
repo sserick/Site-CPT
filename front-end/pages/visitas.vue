@@ -1,7 +1,7 @@
 <template>
   <v-app>
-    <Inicio titulo="Startup Expirence" />
-    <StartupExpirenceTexto />
+    <Inicio titulo="Visitas" />
+    <VisitasTexto />
     <Footer />
   </v-app>
 </template>
@@ -9,13 +9,13 @@
 <script>
 import Footer from '../components/Footer'
 import Inicio from '../components/Inicio'
-import StartupExpirenceTexto from '../components/SectionsStartupExpirence/StartupExpirenceTexto'
+import VisitasTexto from '../components/SectionsVisitas/VisitasTexto'
 
 export default {
   components: {
     Footer,
     Inicio,
-    StartupExpirenceTexto,
+    VisitasTexto,
   },
   methods: {},
 }
