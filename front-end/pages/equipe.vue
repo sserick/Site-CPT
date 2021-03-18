@@ -15,6 +15,9 @@
         <v-col cols="8">
           <Equipe :messages="intituicoes" title="Alunos" />
         </v-col>
+        <v-col cols="8">
+          <Equipe :messages="intituicoes" title="Ex-Alunos" />
+        </v-col>
       </v-row>
     </v-container-fluid>
     <Footer />

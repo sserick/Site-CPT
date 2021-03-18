@@ -8,8 +8,8 @@
     <v-row justify="center">
       <v-expansion-panels popout>
         <v-expansion-panel
-          v-for="(message, i) in messages"
-          :key="i"
+          v-for="message in messages"
+          :key="message"
           hide-actions
         >
           <v-expansion-panel-header class="colorExpansion">
@@ -24,39 +24,38 @@
               </v-col>
 
               <v-col class="hidden" cols="8" sm="5" md="3">
-                <strong v-html="message.name"></strong>
+                <strong>{{ message.title }}</strong>
               </v-col>
 
               <v-col class="text-no-wrap" cols="12" sm="3">
-                <strong v-html="message.title"></strong>
-              </v-col>
-
-              <v-col class="text-no-wrap" cols="12" sm="3">
-                <v-row justify="space-around">
-                  <v-btn icon :href="message.facebook">
-                    <v-icon color="white darken-2">
-                      mdi-facebook
-                    </v-icon>
-                  </v-btn>
-
-                  <v-btn icon :href="message.instagram">
-                    <v-icon color="white darken-2">
-                      mdi-instagram
-                    </v-icon>
-                  </v-btn>
-
-                  <v-btn icon :href="message.linkedln">
-                    <v-icon color="white darken-2">
-                      mdi-linkedin
-                    </v-icon>
-                  </v-btn>
-                </v-row>
+                <strong> {{ message.title }} </strong>
               </v-col>
             </v-row>
           </v-expansion-panel-header>
           <v-expansion-panel-content class="colorExpansion">
             <v-divider></v-divider>
             <v-card-text v-text="message.text"></v-card-text>
+            <v-col class="text-no-wrap" cols="12" sm="12">
+              <v-row justify="space-around">
+                <v-btn icon :href="message.facebook">
+                  <v-icon color="white darken-2">
+                    mdi-facebook
+                  </v-icon>
+                </v-btn>
+
+                <v-btn icon :href="message.instagram">
+                  <v-icon color="white darken-2">
+                    mdi-instagram
+                  </v-icon>
+                </v-btn>
+
+                <v-btn icon :href="message.linkedln">
+                  <v-icon color="white darken-2">
+                    mdi-linkedin
+                  </v-icon>
+                </v-btn>
+              </v-row>
+            </v-col>
           </v-expansion-panel-content>
         </v-expansion-panel>
       </v-expansion-panels>

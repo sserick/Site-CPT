@@ -64,7 +64,7 @@
           scrolling="no"
           marginheight="0"
           marginwidth="0"
-          src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=Av Ataulfo de Paiva 31, Leblon - RIo de Janeiro - RJ +(ProBotox)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.59937853175!2d-49.238018684593655!3d-25.451653983778506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce51a4ba91197%3A0x66846c16d9004ed5!2sN%C3%BAcleo%20de%20Pesquisa%20e%20Desenvolvimento%20de%20Energia%20Autossustent%C3%A1vel!5e0!3m2!1spt-BR!2sbr!4v1604519859648!5m2!1spt-BR!2sbr"
           width="100%"
           height="100%"
           frameborder="0"

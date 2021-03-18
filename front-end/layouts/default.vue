@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <nuxt />
     <div>
       <v-app-bar color="#10041c" height="80px" flat fixed>
         <v-spacer></v-spacer>
@@ -82,9 +83,13 @@
               </v-btn>
             </template>
             <v-list class="listin" light>
-              <v-list-item v-for="(drops, index) in drops" :key="index">
+              <v-list-item v-for="drop in drops" :key="drop.title">
                 <a class="droplista">
-                  <v-list-item-title>{{ drops.title }}</v-list-item-title>
+                  <v-list-item-title class="link"
+                    ><a href="/startupOne">{{
+                      drop.title
+                    }}</a></v-list-item-title
+                  >
                 </a>
               </v-list-item>
             </v-list>
@@ -153,11 +158,13 @@
                 </v-list-item>
               </template>
 
-              <v-list-item v-for="i in dropItems" :key="i" link>
+              <v-list-item v-for="drop in drops" :key="drop.title" link>
                 <v-list-item-content>
-                  <v-list-item-title class="nav-icons ItemDrawer">{{
-                    i
-                  }}</v-list-item-title>
+                  <v-list-item-title class="nav-icons ItemDrawer"
+                    ><a href="/startupOne">{{
+                      drop.title
+                    }}</a></v-list-item-title
+                  >
                 </v-list-item-content>
               </v-list-item>
             </v-list-group>
@@ -172,7 +179,6 @@
         </v-list>
       </v-navigation-drawer>
     </div>
-    <nuxt />
   </v-app>
 </template>
 
@@ -185,7 +191,7 @@ export default {
       drops: [
         {
           title: 'Startup 1',
-          href: '',
+          href: '/startupOne',
         },
         {
           title: 'Startup 2',
@@ -203,13 +209,6 @@ export default {
           title: 'Startup 5',
           href: '',
         },
-      ],
-      dropItems: [
-        'Startup 1',
-        'Startup 2',
-        'Startup 3',
-        'Startup 4',
-        'Startup 5',
       ],
     }
   },
@@ -302,6 +301,11 @@ export default {
 
 .boto {
   background-color: #fff;
+}
+
+.link a {
+  color: #b02e92;
+  text-decoration: none;
 }
 
 .nav-icons {

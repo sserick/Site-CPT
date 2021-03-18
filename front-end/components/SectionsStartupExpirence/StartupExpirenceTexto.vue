@@ -43,7 +43,7 @@
         o celeiro do desenvolvimento científico e tecnológico e, desta forma,
         são os atores com capacidade de iniciar essa transformação.
       </v-col>
-      <v-col cols="8" class="alignmargin">
+      <v-col cols="8">
         <v-row justify="center">
           <v-card width="700px" class="marginCard" color="#fcd24a">
             <v-row justify="center">
@@ -84,7 +84,7 @@ export default {}
 <style scoped>
 .ImageSize {
   height: 500px;
-  width: 500px;
+  width: 700px;
 }
 
 .StartupExpirenceColor {
