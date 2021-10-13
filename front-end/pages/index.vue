@@ -1,33 +1,24 @@
 <template>
   <v-app>
-    <HomeInicio />
-    <CarrosselNoticias />
-    <MVV />
-    <Visitas />
-    <HomeSobreNos />
-    <StartupExpirence />
-    <Footer />
+    <initial />
+    <mvv />
+    <visitas />
+    <startupeExpirence />
   </v-app>
 </template>
 
 <script>
-import Footer from '../components/Footer'
-import HomeInicio from '../components/SectionsHome/Inicio'
-import HomeSobreNos from '../components/SectionsHome/SobreNos'
-import MVV from '../components/SectionsHome/MVV'
-import CarrosselNoticias from '../components/SectionsHome/CarrosselNoticias'
-import StartupExpirence from '../components/SectionsHome/StartupExpirence'
-import Visitas from '../components/SectionsHome/Visitas'
+import startupeExpirence from '../components/SectionsHome/StartupExpirence.vue'
+import visitas from '../components/SectionsHome/Visitas.vue'
+import initial from '../components/SectionsHome/Inicio.vue'
+import mvv from '../components/SectionsHome/MVV.vue'
 
 export default {
   components: {
-    Footer,
-    HomeSobreNos,
-    HomeInicio,
-    MVV,
-    CarrosselNoticias,
-    StartupExpirence,
-    Visitas,
+    initial,
+    mvv,
+    visitas,
+    startupeExpirence,
   },
 }
 </script>

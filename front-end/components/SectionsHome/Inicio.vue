@@ -1,15 +1,7 @@
 <template>
   <v-container-fluid class="MVVColor">
     <v-row>
-      <v-card color="#b02e92" class="cardImage">
-        <v-row align="center" class="ImageSizeOne">
-          <v-img
-            class="ImageSize"
-            src="/imagens/Icons/Imagem6.png"
-            contain
-          ></v-img>
-        </v-row>
-      </v-card>
+      <v-card color="#3fa944" class="cardImage"> </v-card>
     </v-row>
   </v-container-fluid>
 </template>
@@ -30,7 +22,7 @@ export default {}
 }
 
 .cardImage {
-  background-image: url('/imagens/Fundos/2352.jpg');
+  background-image: url('/imagens/Fundos/CPTBio.JPG');
   height: 650px;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -50,19 +42,10 @@ export default {}
 }
 
 @media (min-width: 920px) and (max-width: 2000px) {
-  .ImageSizeOne {
-    height: 750px;
-  }
-
   .cardImage {
     width: 100%;
-    height: 700px;
-    background-size: 100% 850px;
-  }
-
-  .ImageSize {
-    height: 250px;
-    width: 100%;
+    height: 650px;
+    background-size: 100% 100%;
   }
 }
 </style>
