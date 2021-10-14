@@ -1,20 +1,21 @@
 <template>
-  <v-container class="StartupColor">
-    <v-row justify="center">
-      <v-col cols="8">
-        <v-card color="#230c3d">
+  <v-container fluid class="StartupColor">
+    <v-row justify="center" align="center">
+      <v-col cols="9">
+        <v-card color="#3fa944">
           <v-img
             src="https://cdn.vuetifyjs.com/images/cards/house.jpg"
             class="white--text align-end"
             gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-            height="400px"
+            height="300px"
           >
             <v-card-title>{{ name }}</v-card-title>
           </v-img>
 
           <v-card-actions class="justify-center">
             <v-card-text class="d-none d-md-block">{{ text }}</v-card-text>
-
+          </v-card-actions>
+          <v-card-actions class="justify-center">
             <v-btn
               :href="href"
               large
@@ -62,14 +63,6 @@ export default {
 </script>
 
 <style>
-.StartupColor {
-  background-color: #10041c;
-}
-
-.colorExpansion {
-  background-color: #230c3d;
-}
-
 a {
   text-decoration: none;
   color: white;

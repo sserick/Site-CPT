@@ -70,7 +70,7 @@ export default {}
 
 <style scoped>
 .visitas-bg {
-  background-color: #3fa944;
+  background-color: white;
 }
 
 .image {
@@ -93,7 +93,7 @@ export default {}
 }
 
 .VisitasTitle {
-  color: white;
+  color: #3fa944;
   text-align: center;
   font-size: 35px;
   padding-top: 5%;

@@ -5,12 +5,10 @@
     <SobreNos />
     <SuporteAtividadesStartup />
     <FluxogramaStartup />
-    <Footer />
   </v-app>
 </template>
 
 <script>
-import Footer from '../components/Footer'
 import InicioStartup from '../components/SectionsOnlyStartup/InicioStartup'
 import MVVStartup from '../components/SectionsOnlyStartup/MVVStartup'
 import SobreNos from '../components/SectionsOnlyStartup/SobreNosStartup'
@@ -19,7 +17,6 @@ import FluxogramaStartup from '../components/SectionsOnlyStartup/FluxogramaStart
 
 export default {
   components: {
-    Footer,
     InicioStartup,
     MVVStartup,
     SobreNos,

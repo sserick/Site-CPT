@@ -1,27 +1,29 @@
 <template>
   <v-app>
-    <Inicio titulo="Startups" />
+    <initial />
     <v-container-fluid class="marginTop">
-      <v-row>
-        <v-col v-for="item in startups" :key="item.name" cols="12">
-          <Startup :name="item.name" :text="item.text" :href="item.href" />
+      <v-row justify="center" align="center">
+        <v-col
+          v-for="item in startups"
+          :key="item.name"
+          cols="6"
+          class="padding"
+        >
+          <startup :name="item.name" :text="item.text" :href="item.href" />
         </v-col>
       </v-row>
     </v-container-fluid>
-    <Footer />
   </v-app>
 </template>
 
 <script>
-import Footer from '../components/Footer'
-import Inicio from '../components/Inicio'
-import Startup from '../components/SectionsStartups/Startup'
+import initial from '../components/SectionsHome/Inicio.vue'
+import startup from '../components/SectionsStartups/Startup'
 
 export default {
   components: {
-    Footer,
-    Inicio,
-    Startup,
+    initial,
+    startup,
   },
   data() {
     return {
@@ -47,6 +49,13 @@ export default {
           href: '',
           imagem: '',
         },
+        {
+          name: 'Nome da Startup 4',
+          text:
+            'Small plates, salads & sandwiches - an intimate setting with 12 indoor Small plates, salads & sandwiches - an intimate setting with 12 indoor Small plates, salads & sandwiches - an intimate setting with 12 indoor',
+          href: '',
+          imagem: '',
+        },
       ],
     }
   },
@@ -57,7 +66,10 @@ export default {
 <style scoped>
 .marginTop {
   padding-top: 5%;
-  padding-bottom: 5%;
-  background-color: #10041c;
+  background-color: RGBA(63, 169, 68, 0.05);
+}
+
+.padding {
+  padding: 0px;
 }
 </style>

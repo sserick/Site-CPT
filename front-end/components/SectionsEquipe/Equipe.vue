@@ -1,11 +1,11 @@
 <template>
-  <v-container class="EquipeColor">
-    <v-row>
+  <v-container>
+    <v-row align="center" justify="center">
       <v-col cols="12">
         <h1 class="TitleEquipe">{{ title }}</h1>
       </v-col>
     </v-row>
-    <v-row justify="center">
+    <v-row justify="center" align="center">
       <v-expansion-panels popout>
         <v-expansion-panel
           v-for="message in messages"
@@ -24,7 +24,7 @@
               </v-col>
 
               <v-col class="hidden" cols="8" sm="5" md="3">
-                <strong>{{ message.title }}</strong>
+                <strong>{{ message.name }}</strong>
               </v-col>
 
               <v-col class="text-no-wrap" cols="12" sm="3">
@@ -86,10 +86,6 @@ export default {
 </script>
 
 <style>
-.EquipeColor {
-  background-color: #10041c;
-}
-
 .TitleEquipe {
   margin-top: 10px;
   margin-left: 10px;
@@ -97,7 +93,7 @@ export default {
 }
 
 .colorExpansion {
-  background-color: #230c3d;
+  background-color: #3fa944;
 }
 
 a {

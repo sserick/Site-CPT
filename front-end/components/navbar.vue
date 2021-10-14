@@ -84,19 +84,23 @@ export default {
         },
         {
           title: 'QUEM SOMOS',
-          link: '/',
+          link: '/AboutUs',
         },
         {
           title: 'BLOG',
-          link: '/',
+          link: '/blog',
         },
         {
           title: 'EVENTOS',
-          link: '/',
+          link: '/events',
+        },
+        {
+          title: 'EQUIPE',
+          link: '/equipe',
         },
         {
           title: 'STARTUPS',
-          link: '/',
+          link: '/startups',
         },
         {
           title: 'CONTATO',

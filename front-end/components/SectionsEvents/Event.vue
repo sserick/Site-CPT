@@ -1,9 +1,9 @@
 <template>
   <v-card
     :loading="loading"
-    class="mx-auto my-12"
-    max-width="574"
-    color="#230c3d"
+    class="mx-auto my-6"
+    max-width="400"
+    color="#3fa944"
   >
     <template slot="progress">
       <v-progress-linear
@@ -14,7 +14,7 @@
     </template>
 
     <v-img
-      height="250"
+      height="150"
       src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
     ></v-img>
 
@@ -39,22 +39,22 @@
     <v-card-title>Data e horário</v-card-title>
 
     <v-card-text>
-      <v-chip-group v-model="selection" color="purple lighten-5" column>
-        <v-chip color="purple">14/10 - 5:30PM</v-chip>
+      <v-chip-group v-model="selection" color="black lighten-5" column>
+        <v-chip color="yellow">14/10 - 5:30PM</v-chip>
 
-        <v-chip color="purple">15/10 - 7:30PM</v-chip>
+        <v-chip color="yellow">15/10 - 7:30PM</v-chip>
 
-        <v-chip color="purple">18/10 - 8:00PM</v-chip>
+        <v-chip color="yellow">18/10 - 8:00PM</v-chip>
 
-        <v-chip color="purple">19/10 - 9:00PM</v-chip>
+        <v-chip color="yellow">19/10 - 9:00PM</v-chip>
       </v-chip-group>
     </v-card-text>
 
-    <v-card-actions>
-      <v-btn color="yellow lighten-2" text @click="reserve">
+    <v-card-actions class="buttonsEvent">
+      <v-btn color="white lighten-2" text @click="reserve">
         Inscreva-se
       </v-btn>
-      <v-btn color="yellow lighten-2" text @click="reserve">
+      <v-btn color="white lighten-2" text @click="reserve">
         Saiba mais
       </v-btn>
     </v-card-actions>
@@ -83,7 +83,7 @@ export default {
 
 <style scoped>
 .EventColor {
-  background-color: #10041c;
+  background-color: #3fa944;
 }
 
 .title {
@@ -91,6 +91,12 @@ export default {
 }
 
 .EventColorOne {
-  background-color: #151626;
+  background-color: #3fa944;
+}
+
+.buttonsEvent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 </style>

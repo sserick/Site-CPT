@@ -1,47 +1,44 @@
 <template>
   <v-app class="EquipeColor">
-    <Inicio titulo="Equipe" />
+    <initial />
     <v-container-fluid class="marginEquipe">
       <v-row justify="center">
         <v-col cols="8">
-          <Equipe :messages="intituicoes" title="Instituições" />
+          <equipe :messages="intituicoes" title="Instituições" />
         </v-col>
         <v-col cols="8">
-          <Equipe :messages="intituicoes" title="Parcerias" />
+          <equipe :messages="parcerias" title="Parcerias" />
         </v-col>
         <v-col cols="8">
-          <Equipe :messages="intituicoes" title="Professores" />
+          <equipe :messages="professores" title="Professores" />
         </v-col>
         <v-col cols="8">
-          <Equipe :messages="intituicoes" title="Alunos" />
+          <equipe :messages="alunos" title="Alunos" />
         </v-col>
         <v-col cols="8">
-          <Equipe :messages="intituicoes" title="Ex-Alunos" />
+          <equipe :messages="exalunos" title="Ex-Alunos" />
         </v-col>
       </v-row>
     </v-container-fluid>
-    <Footer />
   </v-app>
 </template>
 
 <script>
-import Inicio from '../components/Inicio'
-import Equipe from '../components/SectionsEquipe/Equipe'
-import Footer from '../components/Footer'
+import initial from '../components/SectionsHome/Inicio.vue'
+import equipe from '../components/SectionsEquipe/Equipe.vue'
 
 export default {
   components: {
-    Footer,
-    Inicio,
-    Equipe,
+    initial,
+    equipe,
   },
   data() {
     return {
       intituicoes: [
         {
           avatar: 'https://avatars0.githubusercontent.com/u/9064066?v=4&s=460',
-          name: 'Erick Santos',
-          title: 'Welcome to Vuetify!',
+          name: 'UFPR',
+          title: 'Universidade Federal do Paraná',
           text: 'Thank you for joining our community...',
           facebook: 'https://www.facebook.com/',
           instagram: '',
@@ -49,8 +46,8 @@ export default {
         },
         {
           avatar: 'https://avatars0.githubusercontent.com/u/9064066?v=4&s=460',
-          name: 'Mirele Miranda',
-          title: 'Welcome to Vuetify!',
+          name: 'CPT',
+          title: 'Ciência para Todos',
           text: 'Thank you for joining our community...',
           facebook: 'https://www.facebook.com/',
           instagram: '',
@@ -58,8 +55,9 @@ export default {
         },
         {
           avatar: 'https://avatars0.githubusercontent.com/u/9064066?v=4&s=460',
-          name: 'Beatriz Furlan',
-          title: 'Welcome to Vuetify!',
+          name: 'NPDEAS',
+          title:
+            'Núcleo de Pesquisa e Desenvolvimento de Energia Autossustentável',
           text: 'Thank you for joining our community...',
           facebook: 'https://www.facebook.com/',
           instagram: '',
@@ -69,6 +67,7 @@ export default {
       parcerias: [
         {
           name: 'Parcerias 1',
+          title: 'Universidade Federal do Paraná',
           image: '/imagens/Icons/institui.png',
           face: 'https://www.google.com/',
           insta: 'https://www.youtube.com/',
@@ -77,6 +76,7 @@ export default {
         },
         {
           name: 'Parcerias 2',
+          title: 'Universidade Federal do Paraná',
           image: '/imagens/Icons/institui.png',
           face: 'https://www.google.com/',
           insta: 'https://www.youtube.com/',
@@ -85,6 +85,7 @@ export default {
         },
         {
           name: 'Parcerias 3',
+          title: 'Universidade Federal do Paraná',
           image: '/imagens/Icons/institui.png',
           face: 'https://www.google.com/',
           insta: 'https://www.youtube.com/',
@@ -95,6 +96,7 @@ export default {
       professores: [
         {
           name: 'Professores 1',
+          title: 'Universidade Federal do Paraná',
           image: '/imagens/homem.png',
           face: 'https://www.google.com/',
           insta: 'https://www.youtube.com/',
@@ -103,6 +105,7 @@ export default {
         },
         {
           name: 'Professores 2',
+          title: 'Universidade Federal do Paraná',
           image: '/imagens/homem.png',
           face: 'https://www.google.com/',
           insta: 'https://www.youtube.com/',
@@ -111,6 +114,7 @@ export default {
         },
         {
           name: 'Professores 3',
+          title: 'Universidade Federal do Paraná',
           image: '/imagens/homem.png',
           face: 'https://www.google.com/',
           insta: 'https://www.youtube.com/',
@@ -121,6 +125,7 @@ export default {
       alunos: [
         {
           name: 'Alunos 1',
+          title: 'Universidade Federal do Paraná',
           image: '/imagens/Icons/aluno.png',
           face: 'https://www.google.com/',
           insta: 'https://www.youtube.com/',
@@ -129,6 +134,7 @@ export default {
         },
         {
           name: 'Alunos 2',
+          title: 'Universidade Federal do Paraná',
           image: '/imagens/Icons/aluno.png',
           face: 'https://www.google.com/',
           insta: 'https://www.youtube.com/',
@@ -137,6 +143,7 @@ export default {
         },
         {
           name: 'Alunos 3',
+          title: 'Universidade Federal do Paraná',
           image: '/imagens/Icons/aluno.png',
           face: 'https://www.google.com/',
           insta: 'https://www.youtube.com/',
@@ -147,6 +154,7 @@ export default {
       exalunos: [
         {
           name: 'Ex aluno 1',
+          title: 'Universidade Federal do Paraná',
           image: '/imagens/Icons/aluno.png',
           face: 'https://www.google.com/',
           insta: 'https://www.youtube.com/',
@@ -155,6 +163,7 @@ export default {
         },
         {
           name: 'Ex aluno 2',
+          title: 'Universidade Federal do Paraná',
           image: '/imagens/Icons/aluno.png',
           face: 'https://www.google.com/',
           insta: 'https://www.youtube.com/',
@@ -163,6 +172,7 @@ export default {
         },
         {
           name: 'Ex aluno 3',
+          title: 'Universidade Federal do Paraná',
           image: '/imagens/Icons/aluno.png',
           face: 'https://www.google.com/',
           insta: 'https://www.youtube.com/',
@@ -183,6 +193,6 @@ export default {
 }
 
 .EquipeColor {
-  background-color: #10041c;
+  background-color: RGBA(63, 169, 68, 0.05);
 }
 </style>

@@ -1,21 +1,18 @@
 <template>
   <v-app>
-    <Inicio titulo="Startup Expirence" />
-    <StartupExpirenceTexto />
-    <Footer />
+    <initial />
+    <startupExpirenceInfo />
   </v-app>
 </template>
 
 <script>
-import Footer from '../components/Footer'
-import Inicio from '../components/Inicio'
-import StartupExpirenceTexto from '../components/SectionsStartupExpirence/StartupExpirenceTexto'
+import initial from '../components/SectionsHome/Inicio.vue'
+import startupExpirenceInfo from '../components/SectionsStartupExpirence/StartupExpirenceInfo'
 
 export default {
   components: {
-    Footer,
-    Inicio,
-    StartupExpirenceTexto,
+    initial,
+    startupExpirenceInfo,
   },
   methods: {},
 }
