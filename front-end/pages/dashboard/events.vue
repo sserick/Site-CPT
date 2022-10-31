@@ -3,7 +3,7 @@
     <snack-alert ref="alert" />
     <v-layout class="padding">
       <v-flex>
-        <h2 class="page-title">Página Inicial</h2>
+        <h2 class="page-title">Eventos</h2>
       </v-flex>
     </v-layout>
     <v-divider color="#3fa944" />
@@ -14,11 +14,11 @@
       class="mt-8"
       @click.stop="openRegister()"
       @click="isEdit = false"
-      >Adicionar Informações</v-btn
+      >Adicionar evento</v-btn
     >
     <v-layout class="mt-8">
       <v-flex>
-        <v-data-table :headers="headers" :items="members" hide-default-footer>
+        <v-data-table :headers="headers" :items="members">
           <template>
             <v-icon medium color="blue" @click="dialogEdit(item)">
               mdi-circle-edit-outline
@@ -47,34 +47,28 @@
               <v-flex xs12 sm6 md4>
                 <v-form ref="form" v-model="validation">
                   <v-text-field
-                    v-model="member.mission"
+                    v-model="member.nameEvent"
                     :rules="[(v) => !!v || 'Campo Obrigatório']"
                     color="cyan darken-2"
-                    label="Missão"
+                    label="Nome do evento"
                   />
                   <v-text-field
-                    v-model="member.vision"
+                    v-model="member.description"
                     :rules="[(v) => !!v || 'Campo Obrigatório']"
                     color="cyan darken-2"
-                    label="Visão"
+                    label="Descrição"
                   />
                   <v-text-field
-                    v-model="member.valores"
+                    v-model="member.date"
                     :rules="[(v) => !!v || 'Campo Obrigatório']"
                     color="cyan darken-2"
-                    label="Valores"
+                    label="Data e horário"
                   />
                   <v-text-field
-                    v-model="member.visits"
+                    v-model="member.subscriptionLink"
                     :rules="[(v) => !!v || 'Campo Obrigatório']"
                     color="cyan darken-2"
-                    label="Visitas"
-                  />
-                  <v-text-field
-                    v-model="member.startupExpirience"
-                    :rules="[(v) => !!v || 'Campo Obrigatório']"
-                    color="cyan darken-2"
-                    label="Startup Experience"
+                    label="Link de inscrição"
                   />
                   <v-text-field
                     v-model="imageName"
@@ -118,15 +112,29 @@ export default {
   data() {
     return {
       headers: [
-        { text: 'Missão', align: 'left', sortable: true, value: 'miss' },
-        { text: 'Visão', align: 'left', sortable: true, value: 'vis' },
-        { text: 'Valores', align: 'left', sortable: true, value: 'val' },
-        { text: 'Visitas', align: 'left', sortable: true, value: 'visit' },
         {
-          text: 'Startup Experience',
+          text: 'Nome do Evento',
           align: 'left',
           sortable: true,
-          value: 'startExpi',
+          value: 'nameEvent',
+        },
+        {
+          text: 'Descrição',
+          align: 'left',
+          sortable: true,
+          value: 'description',
+        },
+        {
+          text: 'Data e horário',
+          align: 'left',
+          sortable: true,
+          value: 'date',
+        },
+        {
+          text: 'Link de inscrição',
+          align: 'left',
+          sortable: true,
+          value: 'subscriptionLink',
         },
         {
           text: 'Imagem',
@@ -143,11 +151,10 @@ export default {
       imageNameBackup: '',
       member: {
         id: '',
-        miss: '',
-        vis: '',
-        val: '',
-        visit: '',
-        startExpi: '',
+        nameEvent: '',
+        description: '',
+        date: '',
+        subscriptionLink: '',
         image: '',
       },
     }
@@ -172,7 +179,7 @@ export default {
       return url.split('/')[1].split('.')[0]
     },
     handlerModalTitle() {
-      return this.isEdit ? 'Edite o membro' : 'Adicione um membro'
+      return this.isEdit ? 'Edite o evento' : 'Adicione um evento'
     },
     dialogEdit(item) {
       this.isEdit = true
@@ -208,7 +215,7 @@ export default {
         this.members = this.members.filter((s) => s.id !== i.id)
         this.$refs.alert.showSnack({
           color: 'success',
-          text: 'Membro deletado com sucesso!',
+          text: 'Evento deletada com sucesso!',
         })
       }
     },

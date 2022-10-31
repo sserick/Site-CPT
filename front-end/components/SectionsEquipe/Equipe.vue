@@ -24,11 +24,11 @@
               </v-col>
 
               <v-col class="hidden" cols="8" sm="5" md="3">
-                <strong>{{ message.name }}</strong>
+                <strong class="white--text">{{ message.name }}</strong>
               </v-col>
 
               <v-col class="text-no-wrap" cols="12" sm="3">
-                <strong> {{ message.title }} </strong>
+                <strong class="white--text"> {{ message.title }} </strong>
               </v-col>
             </v-row>
           </v-expansion-panel-header>

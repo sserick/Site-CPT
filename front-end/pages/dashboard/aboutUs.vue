@@ -3,7 +3,7 @@
     <snack-alert ref="alert" />
     <v-layout class="padding">
       <v-flex>
-        <h2 class="page-title">Página Inicial</h2>
+        <h2 class="page-title">Quem Somos</h2>
       </v-flex>
     </v-layout>
     <v-divider color="#3fa944" />
@@ -47,34 +47,16 @@
               <v-flex xs12 sm6 md4>
                 <v-form ref="form" v-model="validation">
                   <v-text-field
-                    v-model="member.mission"
+                    v-model="member.title"
                     :rules="[(v) => !!v || 'Campo Obrigatório']"
                     color="cyan darken-2"
-                    label="Missão"
+                    label="Título da página"
                   />
                   <v-text-field
-                    v-model="member.vision"
+                    v-model="member.aboutProject"
                     :rules="[(v) => !!v || 'Campo Obrigatório']"
                     color="cyan darken-2"
-                    label="Visão"
-                  />
-                  <v-text-field
-                    v-model="member.valores"
-                    :rules="[(v) => !!v || 'Campo Obrigatório']"
-                    color="cyan darken-2"
-                    label="Valores"
-                  />
-                  <v-text-field
-                    v-model="member.visits"
-                    :rules="[(v) => !!v || 'Campo Obrigatório']"
-                    color="cyan darken-2"
-                    label="Visitas"
-                  />
-                  <v-text-field
-                    v-model="member.startupExpirience"
-                    :rules="[(v) => !!v || 'Campo Obrigatório']"
-                    color="cyan darken-2"
-                    label="Startup Experience"
+                    label="Sobre o Projeto"
                   />
                   <v-text-field
                     v-model="imageName"
@@ -118,15 +100,17 @@ export default {
   data() {
     return {
       headers: [
-        { text: 'Missão', align: 'left', sortable: true, value: 'miss' },
-        { text: 'Visão', align: 'left', sortable: true, value: 'vis' },
-        { text: 'Valores', align: 'left', sortable: true, value: 'val' },
-        { text: 'Visitas', align: 'left', sortable: true, value: 'visit' },
         {
-          text: 'Startup Experience',
+          text: 'Título da página',
           align: 'left',
           sortable: true,
-          value: 'startExpi',
+          value: 'title',
+        },
+        {
+          text: 'Sobre o Projeto',
+          align: 'left',
+          sortable: true,
+          value: 'aboutProject',
         },
         {
           text: 'Imagem',
@@ -143,11 +127,8 @@ export default {
       imageNameBackup: '',
       member: {
         id: '',
-        miss: '',
-        vis: '',
-        val: '',
-        visit: '',
-        startExpi: '',
+        title: '',
+        aboutProject: '',
         image: '',
       },
     }
@@ -172,7 +153,7 @@ export default {
       return url.split('/')[1].split('.')[0]
     },
     handlerModalTitle() {
-      return this.isEdit ? 'Edite o membro' : 'Adicione um membro'
+      return this.isEdit ? 'Edite as informações' : 'Adicione uma informação'
     },
     dialogEdit(item) {
       this.isEdit = true
@@ -208,7 +189,7 @@ export default {
         this.members = this.members.filter((s) => s.id !== i.id)
         this.$refs.alert.showSnack({
           color: 'success',
-          text: 'Membro deletado com sucesso!',
+          text: 'Informações deletadas com sucesso!',
         })
       }
     },

@@ -3,7 +3,7 @@
     <snack-alert ref="alert" />
     <v-layout class="padding">
       <v-flex>
-        <h2 class="page-title">Página Inicial</h2>
+        <h2 class="page-title">Contato</h2>
       </v-flex>
     </v-layout>
     <v-divider color="#3fa944" />
@@ -14,7 +14,7 @@
       class="mt-8"
       @click.stop="openRegister()"
       @click="isEdit = false"
-      >Adicionar Informações</v-btn
+      >Adicionar Informações de Contato</v-btn
     >
     <v-layout class="mt-8">
       <v-flex>
@@ -47,51 +47,52 @@
               <v-flex xs12 sm6 md4>
                 <v-form ref="form" v-model="validation">
                   <v-text-field
-                    v-model="member.mission"
+                    v-model="member.description"
                     :rules="[(v) => !!v || 'Campo Obrigatório']"
                     color="cyan darken-2"
-                    label="Missão"
+                    label="Descrição"
                   />
                   <v-text-field
-                    v-model="member.vision"
+                    v-model="member.address"
                     :rules="[(v) => !!v || 'Campo Obrigatório']"
                     color="cyan darken-2"
-                    label="Visão"
+                    label="Endereço"
                   />
                   <v-text-field
-                    v-model="member.valores"
+                    v-model="member.mail"
                     :rules="[(v) => !!v || 'Campo Obrigatório']"
                     color="cyan darken-2"
-                    label="Valores"
+                    label="Email"
                   />
                   <v-text-field
-                    v-model="member.visits"
+                    v-model="member.phoneOne"
                     :rules="[(v) => !!v || 'Campo Obrigatório']"
                     color="cyan darken-2"
-                    label="Visitas"
+                    label="Telefone 1"
                   />
                   <v-text-field
-                    v-model="member.startupExpirience"
+                    v-model="member.phoneTwo"
                     :rules="[(v) => !!v || 'Campo Obrigatório']"
                     color="cyan darken-2"
-                    label="Startup Experience"
+                    label="Telefone 2"
                   />
                   <v-text-field
-                    v-model="imageName"
+                    v-model="member.face"
                     :rules="[(v) => !!v || 'Campo Obrigatório']"
-                    label="Imagem"
-                    regular
-                    hint="Tamanho máximo de 2MB"
-                    readonly
-                    prepend-inner-icon="mdi-camera"
+                    color="cyan darken-2"
+                    label="link do Facebook"
                   />
-
-                  <input
-                    ref="imginput"
-                    type="file"
-                    accept="image/*"
-                    style="display: none;"
-                    @change="pickSelectImage"
+                  <v-text-field
+                    v-model="member.insta"
+                    :rules="[(v) => !!v || 'Campo Obrigatório']"
+                    color="cyan darken-2"
+                    label="link do Instagram"
+                  />
+                  <v-text-field
+                    v-model="member.youtube"
+                    :rules="[(v) => !!v || 'Campo Obrigatório']"
+                    color="cyan darken-2"
+                    label="link do Youtube"
                   />
                 </v-form>
               </v-flex>
@@ -118,21 +119,53 @@ export default {
   data() {
     return {
       headers: [
-        { text: 'Missão', align: 'left', sortable: true, value: 'miss' },
-        { text: 'Visão', align: 'left', sortable: true, value: 'vis' },
-        { text: 'Valores', align: 'left', sortable: true, value: 'val' },
-        { text: 'Visitas', align: 'left', sortable: true, value: 'visit' },
         {
-          text: 'Startup Experience',
+          text: 'Descrição',
           align: 'left',
           sortable: true,
-          value: 'startExpi',
+          value: 'description',
         },
         {
-          text: 'Imagem',
-          align: 'middle',
+          text: 'Endereço',
+          align: 'left',
           sortable: true,
-          value: 'image_path',
+          value: 'address',
+        },
+        {
+          text: 'E-mail',
+          align: 'left',
+          sortable: true,
+          value: 'mail',
+        },
+        {
+          text: 'Telefone 1',
+          align: 'left',
+          sortable: true,
+          value: 'phoneOne',
+        },
+        {
+          text: 'Telefone 2',
+          align: 'left',
+          sortable: true,
+          value: 'phoneTwo',
+        },
+        {
+          text: 'Facebook',
+          align: 'left',
+          sortable: true,
+          value: 'face',
+        },
+        {
+          text: 'Instagram',
+          align: 'left',
+          sortable: true,
+          value: 'insta',
+        },
+        {
+          text: 'Youtube',
+          align: 'left',
+          sortable: true,
+          value: 'youtube',
         },
       ],
       members: [],
@@ -143,12 +176,14 @@ export default {
       imageNameBackup: '',
       member: {
         id: '',
-        miss: '',
-        vis: '',
-        val: '',
-        visit: '',
-        startExpi: '',
-        image: '',
+        description: '',
+        address: '',
+        mail: '',
+        phoneOne: '',
+        phoneTwo: '',
+        face: '',
+        insta: '',
+        youtube: '',
       },
     }
   },
@@ -172,7 +207,7 @@ export default {
       return url.split('/')[1].split('.')[0]
     },
     handlerModalTitle() {
-      return this.isEdit ? 'Edite o membro' : 'Adicione um membro'
+      return this.isEdit ? 'Edite o contato' : 'Adicione um contato'
     },
     dialogEdit(item) {
       this.isEdit = true
@@ -208,7 +243,7 @@ export default {
         this.members = this.members.filter((s) => s.id !== i.id)
         this.$refs.alert.showSnack({
           color: 'success',
-          text: 'Membro deletado com sucesso!',
+          text: 'Contato deletado com sucesso!',
         })
       }
     },

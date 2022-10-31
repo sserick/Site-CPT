@@ -3,7 +3,7 @@
     <snack-alert ref="alert" />
     <v-layout class="padding">
       <v-flex>
-        <h2 class="page-title">Página Inicial</h2>
+        <h2 class="page-title">Startups</h2>
       </v-flex>
     </v-layout>
     <v-divider color="#3fa944" />
@@ -14,11 +14,11 @@
       class="mt-8"
       @click.stop="openRegister()"
       @click="isEdit = false"
-      >Adicionar Informações</v-btn
+      >Adicionar Startup</v-btn
     >
     <v-layout class="mt-8">
       <v-flex>
-        <v-data-table :headers="headers" :items="members" hide-default-footer>
+        <v-data-table :headers="headers" :items="members">
           <template>
             <v-icon medium color="blue" @click="dialogEdit(item)">
               mdi-circle-edit-outline
@@ -47,34 +47,34 @@
               <v-flex xs12 sm6 md4>
                 <v-form ref="form" v-model="validation">
                   <v-text-field
-                    v-model="member.mission"
+                    v-model="member.name"
                     :rules="[(v) => !!v || 'Campo Obrigatório']"
                     color="cyan darken-2"
-                    label="Missão"
+                    label="Nome"
                   />
                   <v-text-field
-                    v-model="member.vision"
+                    v-model="member.description"
                     :rules="[(v) => !!v || 'Campo Obrigatório']"
                     color="cyan darken-2"
-                    label="Visão"
+                    label="Descrição"
                   />
                   <v-text-field
-                    v-model="member.valores"
+                    v-model="member.face"
                     :rules="[(v) => !!v || 'Campo Obrigatório']"
                     color="cyan darken-2"
-                    label="Valores"
+                    label="Facebook"
                   />
                   <v-text-field
-                    v-model="member.visits"
+                    v-model="member.insta"
                     :rules="[(v) => !!v || 'Campo Obrigatório']"
                     color="cyan darken-2"
-                    label="Visitas"
+                    label="Instagram"
                   />
                   <v-text-field
-                    v-model="member.startupExpirience"
+                    v-model="member.linkedin"
                     :rules="[(v) => !!v || 'Campo Obrigatório']"
                     color="cyan darken-2"
-                    label="Startup Experience"
+                    label="Linkedin"
                   />
                   <v-text-field
                     v-model="imageName"
@@ -118,16 +118,16 @@ export default {
   data() {
     return {
       headers: [
-        { text: 'Missão', align: 'left', sortable: true, value: 'miss' },
-        { text: 'Visão', align: 'left', sortable: true, value: 'vis' },
-        { text: 'Valores', align: 'left', sortable: true, value: 'val' },
-        { text: 'Visitas', align: 'left', sortable: true, value: 'visit' },
+        { text: 'Nome', align: 'left', sortable: true, value: 'name' },
+        { text: 'Descrição', align: 'left', sortable: true, value: 'descri' },
+        { text: 'Facebook', align: 'left', sortable: true, value: 'face' },
         {
-          text: 'Startup Experience',
+          text: 'Instagram',
           align: 'left',
           sortable: true,
-          value: 'startExpi',
+          value: 'insta',
         },
+        { text: 'Linkedin', align: 'left', sortable: true, value: 'linkdln' },
         {
           text: 'Imagem',
           align: 'middle',
@@ -143,11 +143,11 @@ export default {
       imageNameBackup: '',
       member: {
         id: '',
-        miss: '',
-        vis: '',
-        val: '',
-        visit: '',
-        startExpi: '',
+        name: '',
+        descri: '',
+        face: '',
+        insta: '',
+        linkdln: '',
         image: '',
       },
     }
@@ -172,7 +172,7 @@ export default {
       return url.split('/')[1].split('.')[0]
     },
     handlerModalTitle() {
-      return this.isEdit ? 'Edite o membro' : 'Adicione um membro'
+      return this.isEdit ? 'Edite a startup' : 'Adicione uma startup'
     },
     dialogEdit(item) {
       this.isEdit = true
@@ -208,7 +208,7 @@ export default {
         this.members = this.members.filter((s) => s.id !== i.id)
         this.$refs.alert.showSnack({
           color: 'success',
-          text: 'Membro deletado com sucesso!',
+          text: 'Startup deletada com sucesso!',
         })
       }
     },

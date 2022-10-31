@@ -60,7 +60,7 @@ export default {
       {
         icon: 'mdi-rocket',
         text: 'Startups',
-        link: '/dashboard/startups',
+        link: '/dashboard/startup',
       },
       {
         icon: 'mdi-contacts',
