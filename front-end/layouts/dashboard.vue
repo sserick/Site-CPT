@@ -1,16 +1,18 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="drawer" app dark>
+    <v-navigation-drawer v-model="drawer" app color="#3fa944">
       <v-list>
         <v-list-item-group>
-          <v-list-item v-for="(item, i) in items" :key="i" :to="item.link">
-            <v-list-item-icon>
-              <v-icon v-text="item.icon"></v-icon>
-            </v-list-item-icon>
-            <v-list-item-content>
-              <v-list-item-title v-text="item.text"></v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
+          <div v-for="(item, i) in items" :key="i" :to="item.link">
+            <v-list-item dark :to="item.link">
+              <v-list-item-icon>
+                <v-icon v-text="item.icon"></v-icon>
+              </v-list-item-icon>
+              <v-list-item-content>
+                <v-list-item-title v-text="item.text"></v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </div>
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
@@ -19,15 +21,13 @@
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title>Painel do Administrador</v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn @click="logout()">
-        Sair
-      </v-btn>
+      <v-btn color="red" @click="logout()">Sair</v-btn>
     </v-app-bar>
     <v-content>
       <nuxt />
     </v-content>
     <v-footer app inset dark>
-      <span class="white--text">&copy; Ecomp 2020</span>
+      <span class="white--text">&copy; Erick Santos - 2021</span>
     </v-footer>
   </v-app>
 </template>
@@ -35,17 +35,37 @@
 <script>
 export default {
   data: () => ({
-    drawer: null,
+    drawer: false,
     items: [
       {
-        icon: 'mdi-check',
-        text: 'Dashboard1',
-        link: '/dashboard/dashboard1',
+        icon: 'mdi-home',
+        text: 'Início',
+        link: '/dashboard/home',
       },
       {
-        icon: 'mdi-check',
-        text: 'Dashboard2',
-        link: '/dashboard/dashboard2',
+        icon: 'mdi-account-multiple',
+        text: 'Quem Somos',
+        link: '/dashboard/aboutUs',
+      },
+      {
+        icon: 'mdi-stadium',
+        text: 'Eventos',
+        link: '/dashboard/events',
+      },
+      {
+        icon: 'mdi-clipboard-account',
+        text: 'Equipe',
+        link: '/dashboard/equipe',
+      },
+      {
+        icon: 'mdi-rocket',
+        text: 'Startups',
+        link: '/dashboard/startup',
+      },
+      {
+        icon: 'mdi-contacts',
+        text: 'Contato',
+        link: '/dashboard/contact',
       },
     ],
   }),
@@ -57,7 +77,7 @@ export default {
   },
   head() {
     return {
-      title: 'Dashboard',
+      title: 'Painel Administrativo',
       meta: [
         {
           hid: 'description',
@@ -69,3 +89,15 @@ export default {
   },
 }
 </script>
+
+<style>
+.headline {
+  background-color: #3fa944;
+  color: white;
+}
+
+.tokenCode {
+  color: green;
+  font-size: 2rem;
+}
+</style>

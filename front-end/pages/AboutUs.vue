@@ -1,18 +1,18 @@
 <template>
   <v-app>
     <initial />
-    <startupExpirenceInfo />
+    <aboutUsInfo />
   </v-app>
 </template>
 
 <script>
 import initial from '../components/SectionsHome/Inicio.vue'
-import startupExpirenceInfo from '../components/SectionsStartupExpirence/StartupExpirenceInfo'
+import aboutUsInfo from '../components/SectionsAboutUs/AboutUsInfo.vue'
 
 export default {
   components: {
     initial,
-    startupExpirenceInfo,
+    aboutUsInfo,
   },
   methods: {},
 }

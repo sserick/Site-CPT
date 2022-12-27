@@ -1,18 +1,18 @@
 <template>
   <v-app>
     <initial />
-    <startupExpirenceInfo />
+    <pageVisits />
   </v-app>
 </template>
 
 <script>
 import initial from '../components/SectionsHome/Inicio.vue'
-import startupExpirenceInfo from '../components/SectionsStartupExpirence/StartupExpirenceInfo'
+import pageVisits from '../components/SectionsVisits/PageVisits.vue'
 
 export default {
   components: {
     initial,
-    startupExpirenceInfo,
+    pageVisits,
   },
   methods: {},
 }

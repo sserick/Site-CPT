@@ -1,6 +1,7 @@
 <template>
-  <v-container class="sectionMVV">
+  <v-container fluid class="sectionMVV">
     <v-row align="start" justify="center">
+      <v-spacer class="d-none d-lg-flex" />
       <v-col cols="10" md="5" sm="5" lg="3">
         <v-row justify="center" align="center">
           <v-icon class="IconPageMVV" size="70">mdi-flask-outline</v-icon>
@@ -50,6 +51,7 @@
           </p>
         </v-row>
       </v-col>
+      <v-spacer class="d-none d-lg-flex" />
     </v-row>
   </v-container>
 </template>
@@ -64,13 +66,14 @@ export default {}
 .sectionMVV {
   padding-top: 4%;
   padding-bottom: 4%;
+  background-color: #3fa944;
 }
 
 .TitlePageMVV {
   font-size: 36px;
   font-family: 'Open Sans', sans-serif;
   text-align: left;
-  color: #3fa944;
+  color: white;
   font-weight: bold;
   margin-bottom: 30px;
 }
@@ -79,14 +82,14 @@ export default {}
   font-size: 15px;
   font-family: 'Open Sans', sans-serif;
   text-align: justify;
-  color: #3c424f;
+  color: black;
 }
 
 .textVal {
   font-size: 15px;
   font-family: 'Open Sans', sans-serif;
   text-align: justify;
-  color: #3c424f;
+  color: black;
   width: 100%;
   margin-bottom: 0px;
 }
@@ -95,10 +98,10 @@ export default {}
   font-size: 36px;
   font-family: 'Open Sans', sans-serif;
   text-align: left;
-  color: #3fa944;
+  color: white;
   font-weight: 900;
   padding: 30px;
-  border-color: #3fa944;
+  border-color: white;
   border-width: 2px;
   border-style: solid;
   border-radius: 90px;
@@ -106,16 +109,16 @@ export default {}
 }
 
 .IconPageMVV:hover {
-  border-color: #3fa944;
-  color: white;
-  background-color: #3fa944;
+  border-color: white;
+  color: #3fa944;
+  background-color: white;
 }
 
 .TitleValores {
   font-size: 36px;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
-  color: #3c424f;
+  color: black;
   font-weight: 900;
 }
 

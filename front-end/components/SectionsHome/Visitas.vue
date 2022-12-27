@@ -43,8 +43,8 @@
             <v-btn
               large
               rounded
-              color="#fcd24a"
-              class="black--text"
+              color="#3fa944"
+              class="white--text"
               href="/visitas"
             >
               Saiba mais
@@ -52,7 +52,7 @@
             </v-btn>
           </v-col>
           <v-col cols="6" class="buttonAling">
-            <v-btn large rounded color="#fcd24a" class="black--text">
+            <v-btn large rounded color="#3fa944" class="white--text">
               Agende sua visita
               <v-icon right dark>mdi-rocket</v-icon>
             </v-btn>
@@ -70,7 +70,7 @@ export default {}
 
 <style scoped>
 .visitas-bg {
-  background-color: #3fa944;
+  background-color: white;
 }
 
 .image {
@@ -93,7 +93,7 @@ export default {}
 }
 
 .VisitasTitle {
-  color: white;
+  color: #3fa944;
   text-align: center;
   font-size: 35px;
   padding-top: 5%;

@@ -44,8 +44,8 @@
             <v-btn
               large
               rounded
-              color="#fcd24a"
-              class="black--text"
+              color="#3fa944"
+              class="white--text"
               href="/startupeExpirence"
             >
               Saiba mais

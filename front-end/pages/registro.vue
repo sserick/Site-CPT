@@ -1,6 +1,5 @@
 <template>
   <div>
-    <title-auth titulo="Registro" />
     <input-auth v-model="name" placeholder="Nome" />
     <input-auth v-model="email" placeholder="Email" />
     <input-auth v-model="password" placeholder="Senha" type="password" />
@@ -18,11 +17,9 @@
 
 <script>
 import InputAuth from '../components/inputs/InputAuth'
-import TitleAuth from '../components/sections/auth/TitleAuth'
 
 export default {
   components: {
-    TitleAuth,
     InputAuth,
   },
   data() {
